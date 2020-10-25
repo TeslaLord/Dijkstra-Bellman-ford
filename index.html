@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortest Path Algorithm</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://kit.fontawesome.com/97f4dbfedd.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-light text-light" style="background-color: rgb(63, 62, 62);font-size:20px;">
+
+        <!-- <div class="row">
+            <div class="box float-right">
+                <select id="items">
+                    <option value="dj" id="dijkstra">Dijkstra Algorithm</option>
+                    <option value="bell" id="bellman">Bellman-Ford Algorithm</option>
+                </select>
+            </div>
+
+            <div class="input-bar col-12 offset-5">
+                Enter the number of nodes: <input type="number" id="nodenum" value="nodevalue"
+                    style="width: 80px !important;">
+                Starting node: <input type="number" id="startingnode" value="startnode" style="width: 80px !important;">
+                ending node: <input type="number" id="endingnode" value="endnode" style="width: 80px !important;">
+            </div>
+        </div> -->
+        <div class="row text-center">
+            <div class="col-md-3 box col-sm-12">
+                <select id="items" style="height:70% !important; margin-top:6%;width:100% !important;"></i>
+                    <option value="dj" id="dijkstra">Dijkstra Algorithm
+                    </option>
+                    <option value="bell" id="bellman">Bellman-Ford Algorithm</option>
+                </select>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                Number of nodes: <input type="number" id="nodenum" value="nodevalue" style="width: 80% !important;">
+            </div>
+            <div class="col-md-3 col-sm-12">
+                Starting node: <input type="number" id="startingnode" value="startnode" style="width: 80% !important;">
+            </div>
+            <div class="col-md-3 col-sm-12">ending node: <input type="number" id="endingnode" value="endnode"
+                    style="width: 80% !important;"></div>
+        </div>
+    </nav>
+    <br>
+    <div class="container ">
+        <div class="form-group">
+            <h5>
+                <form id="frm1" class="formfield" action="/action_page.php">
+                    <div class="text-center" style="vertical-align: middle;">
+                        Enter the links: <textarea type="text" name="nodeconn" value="nodeconn"></textarea>
+                        <h6>Separate them with ',' "from,to,cost" (Enter for next edge)</h6>
+                    </div>
+                </form>
+            </h5>
+        </div>
+        <div class="row">
+            <div id="container" class="col-6 ">
+
+
+            </div>
+            <div id="container2" class="col-6"> <span id="temptext"
+                    style="width:100%; text-align:center; font-size:x-large;">
+                    <p>Enter the inputs</p>
+                    <p>Click on Generate graph to view the input graph</p>
+                    <p>Click the outputs for required solutions</p>
+                </span>
+            </div>
+            <!-- <div id="network2" style="display:none;"></div> -->
+        </div>
+        <br>
+        <div class="text-center row">
+            <div class="col-md-6"><button type="button" class="btn btn-danger" id="generate-graph">Generate
+                    Graph</button>
+            </div>
+
+            <div class="col-md-2"><button type="button" class="btn btn-success" id="out-1">Output 1</button></div>
+            <div class="col-md-2"><button type="button" class="btn btn-success" id="out-2">Output 2</button></div>
+            <div class="col-md-2"><button type="button" class="btn btn-success" id="out-3">Output 3</button></div>
+
+
+        </div>
+    </div>
+    <br><br>
+</body>
+
+</html>
